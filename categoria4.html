@@ -10,19 +10,19 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <button class="menu-btn" aria-label="Abrir menú">&#9776;</button>
-            <h1>Ludoteca Andana</h1>
-            <img src="img/logo.png" alt="Logo Ludoteca Andana" class="logo-header">
+        <div class="navbar">
+            <div class="navbar-titulo">
+                <h1>Ludoteca Andana</h1>
+            </div>
+            <nav class="navbar-menu">
+                <a href="index.html">Inicio</a>
+                <a href="categoria1.html">Familiares</a>
+                <a href="categoria2.html">Estrategia</a>
+                <a href="categoria3.html">Party Game</a>
+                <a href="categoria4.html">Infantiles</a>
+                <a href="categoria5.html">Pareja</a>
+            </nav>
         </div>
-        <nav class="menu-opciones">
-            <a href="index.html">Inicio</a>
-            <a href="categoria1.html">Familiares</a>
-            <a href="categoria2.html">Estrategia</a>
-            <a href="categoria3.html">Party Game</a>
-            <a href="categoria4.html" class="activo">Infantiles</a>
-            <a href="categoria5.html">Pareja</a>
-        </nav>
     </header>
     <main>
         <section class="categoria-listado">
@@ -62,11 +62,5 @@
     <footer>
         <p>&copy; 2023 Ludoteca Andana. Todos los derechos reservados.</p>
     </footer>
-    <script src="js/main.js"></script>
-    <script>
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.querySelector('.menu-opciones').classList.toggle('activo');
-        });
-    </script>
 </body>
 </html>

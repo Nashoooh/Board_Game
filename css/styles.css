@@ -1,8 +1,8 @@
 :root {
-    --color-principal: #3a9ac4;      /* Celeste pastel principal */
-    --color-secundario: #83cef7;     /* Celeste pastel claro */
-    --color-fondo: #f0f9ff;          /* Fondo muy claro celeste */
-    --color-texto: #155e75;          /* Celeste oscuro para texto */
+    --color-principal: #3a9ac4;
+    --color-secundario: #83cef7;
+    --color-fondo: #f0f9ff;
+    --color-texto: #155e75;
     --footer-altura: 60px;
 }
 
@@ -32,7 +32,7 @@ header {
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
-    position: relative; /* <-- Importante */
+    position: relative;
     z-index: 10;
 }
 
@@ -137,7 +137,6 @@ footer {
     }
 }
 
-/* 1 columna en móviles pequeños */
 @media (max-width: 400px) {
     .tarjetas-categorias {
         flex-direction: column;
@@ -153,7 +152,6 @@ footer p {
     margin: 0;
 }
 
-/* Header layout mejorado */
 .header-content {
     display: flex;
     align-items: center;
@@ -163,18 +161,6 @@ footer p {
     padding: 0 1rem;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.logo-header {
-    height: 80px;
-    width: auto;
-}
 
 .header-content h1 {
     flex: 1;
@@ -183,47 +169,6 @@ footer p {
     font-size: 2rem;
 }
 
-/* Menú desplegable oculto por defecto */
-.menu-opciones {
-    display: none;
-    flex-direction: column;
-    background: var(--color-principal);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 150px; /* ancho fijo para el menú lateral */
-    z-index: 100;
-    border-radius: 0 0 12px 0;
-    box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
-}
-
-.menu-opciones a {
-    color: #fff;
-    padding: 1rem;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-align: left;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.menu-opciones a:last-child {
-    border-bottom: none;
-}
-
-/* Mostrar menú cuando se activa */
-.menu-opciones.activo {
-    display: flex;
-}
-
-/* Responsive: logo más pequeño en móvil */
-@media (max-width: 600px) {
-    .logo-header {
-        height: 36px;
-    }
-    .header-content h1 {
-        font-size: 1.2rem;
-    }
-}
 
 .categoria-listado {
     max-width: 1200px;
@@ -318,20 +263,168 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
-    .menu-opciones {
-        display: flex !important;
-        position: static;
-        width: 100vw;
-        border-radius: 0;
-        box-shadow: none;
-        background: var(--color-principal);
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-principal);
+    padding: 0.1rem 1rem;
+    min-height: 38px;
+}
+
+.navbar-titulo {
+    flex: 1 1 33%;
+}
+
+.navbar-titulo h1 {
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.4rem;
+    margin: 0 0 0.4em 0;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.navbar-menu {
+    flex: 2 1 67%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 0.2rem 0.8rem;
+    transition: color 0.2s;
+    margin: 0;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+
+.navbar-menu a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background: var(--color-secundario);
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+
+.navbar-menu a:hover {
+    color: var(--color-secundario);
+    text-decoration: underline;
+    background: none;
+}
+
+@media (max-width: 700px) {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+        min-height: unset;
     }
-    .logo-header {
+    .navbar-titulo {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .navbar-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .navbar-menu a {
+        margin: 0.2rem 0.2rem;
+        border: none;
+        height: auto;
+    }
+    .navbar-menu a:not(:last-child)::after {
         display: none;
     }
-    .menu-btn {
-        z-index: 101;
+}
+
+
+/* Animaciones CSS para el proyecto */
+
+/* 1. Animaciones de entrada alternadas para tarjetas de categorías */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.95);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.tarjeta-categoria:nth-child(odd) {
+    animation: fadeInLeft 0.8s cubic-bezier(.4,0,.2,1) both;
+}
+.tarjeta-categoria:nth-child(even) {
+    animation: fadeInRight 0.8s cubic-bezier(.4,0,.2,1) both;
+}
+
+/* 2. Animación de subrayado deslizante en los enlaces del navbar */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 0px var(--color-secundario);
+    }
+    100% {
+        box-shadow: 0 0 8px 2px var(--color-secundario);
+    }
+}
+
+.navbar-menu a:hover::before {
+    transform: scaleX(1);
+}
+
+/* 3. Animación de rebote en las imágenes de producto al hacer hover */
+@keyframes bounce {
+    0%   { transform: scale(1);}
+    30%  { transform: scale(1.08);}
+    50%  { transform: scale(0.97);}
+    70%  { transform: scale(1.03);}
+    100% { transform: scale(1);}
+}
+
+.producto img:hover {
+    animation: bounce 0.5s;
+}
+
+/* 4. Animación de entrada para el navbar */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: slideDown 0.7s ease;
 }
