@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca Andana</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="menu-btn" aria-label="Abrir menú">&#9776;</button>
+            <h1>Ludoteca Andana</h1>
+            <img src="img/logo.png" alt="Logo Ludoteca Andana" class="logo-header">
+        </div>
+        <nav class="menu-opciones">
+            <!-- Opciones del menú desplegable -->
+            <a href="index.html">Inicio</a>
+            <a href="categoria1.html">Familiares</a>
+            <a href="categoria2.html">Estrategia</a>
+            <a href="categoria3.html">Party Game</a>
+            <a href="categoria4.html">Infantiles</a>
+            <a href="categoria5.html">Pareja</a>
+        </nav>
+    </header>
+    <main>
+        <section class="categorias">
+            <h2>Categorías de Juegos</h2>
+            <div class="tarjetas-categorias">
+                <a href="categoria1.html" class="tarjeta-categoria">
+                    <img src="img/category1.png" alt="Familiares">
+                    <span>Familiares</span>
+                </a>
+                <a href="categoria2.html" class="tarjeta-categoria">
+                    <img src="img/category2.png" alt="Estrategia">
+                    <span>Estrategia</span>
+                </a>
+                <a href="categoria3.html" class="tarjeta-categoria">
+                    <img src="img/category3.png" alt="Party Game">
+                    <span>Party Game</span>
+                </a>
+                <a href="categoria4.html" class="tarjeta-categoria">
+                    <img src="img/category4.png" alt="Infantiles">
+                    <span>Infantiles</span>
+                </a>
+                <a href="categoria5.html" class="tarjeta-categoria">
+                    <img src="img/category5.png" alt="Pareja">
+                    <span>Pareja</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ludoteca Andana. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.menu-opciones').classList.toggle('activo');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca Andana</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="menu-btn" aria-label="Abrir menú">&#9776;</button>
+            <h1>Ludoteca Andana</h1>
+            <img src="img/logo.png" alt="Logo Ludoteca Andana" class="logo-header">
+        </div>
+        <nav class="menu-opciones">
+            <a href="index.html">Inicio</a>
+            <a href="categoria1.html">Familiares</a>
+            <a href="categoria2.html">Estrategia</a>
+            <a href="categoria3.html">Party Game</a>
+            <a href="categoria4.html" class="activo">Infantiles</a>
+            <a href="categoria5.html">Pareja</a>
+        </nav>
+    </header>
+    <main>
+        <section class="categoria-listado">
+            <h2>Juegos Infantiles</h2>
+            <div class="productos">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <img src="img/infantil1.jpg" alt="Cortex Kids 2">
+                    <div class="info-producto">
+                        <h3>Cortex Kids 2</h3>
+                        <p>Con este juego de mesa desarrolla tu agilidad visual, tu coordinación, tu memoria, capacidad de razonamiento … ¡incluso la sensibilidad de tu tacto!</p>
+                        <p class="precio"><span class="precio-normal">$15.990</span> <span class="precio-oferta">$13.990</span></p>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <img src="img/infantil2.jpg" alt="Catan Junior">
+                    <div class="info-producto">
+                        <h3>Catan Junior</h3>
+                        <p>¡Tierra a la vista! ¡Navega por los mares con tus barcos, descubre nuevas islas y construye unas cuantas guaridas de piratas!</p>
+                        <p class="precio"><span class="precio-oferta">$29.990</span></p>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="img/infantil3.jpg" alt="Brainbox Imágenes">
+                    <div class="info-producto">
+                        <h3>Brainbox Imágenes</h3>
+                        <p>Intenta memorizar las imágenes de tu carta en 10 segundos. A continuación, tendrás que responder a una pregunta sobre la carta que has visto.</p>
+                        <p class="precio"><span class="precio-normal">$16.990</span> <span class="precio-oferta">$14.990</span></p>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="volver-inicio">← Volver al inicio</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ludoteca Andana. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.menu-opciones').classList.toggle('activo');
+        });
+    </script>
+</body>
+</html>

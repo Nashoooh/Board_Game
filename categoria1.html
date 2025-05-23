@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca Andana</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="menu-btn" aria-label="Abrir menú">&#9776;</button>
+            <h1>Ludoteca Andana</h1>
+            <img src="img/logo.png" alt="Logo Ludoteca Andana" class="logo-header">
+        </div>
+        <nav class="menu-opciones">
+            <a href="index.html">Inicio</a>
+            <a href="categoria1.html">Familiares</a>
+            <a href="categoria2.html">Estrategia</a>
+            <a href="categoria3.html">Party Game</a>
+            <a href="categoria4.html">Infantiles</a>
+            <a href="categoria5.html">Pareja</a>
+        </nav>
+    </header>
+    <main>
+        <section class="categoria-listado">
+            <h2>Juegos Familiares</h2>
+            <div class="productos">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <img src="img/familiares1.jpg" alt="Juego 1">
+                    <div class="info-producto">
+                        <h3>Dobble</h3>
+                        <p>¡Un clásico de rapidez y observación para todas las edades!</p>
+                        <p class="precio"><span class="precio-normal">$24.990</span> <span class="precio-oferta">$20.990</span></p>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <img src="img/familiares2.jpg" alt="Juego 2">
+                    <div class="info-producto">
+                        <h3>Ranking Top</h3>
+                        <p>¡No dejes que te superen y alcanza el podio con los hits de 31 Minutos!</p>
+                        <p class="precio"><span class="precio-oferta">$28.000</span></p>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="img/familiares3.jpg" alt="Juego 3">
+                    <div class="info-producto">
+                        <h3>Unstable Unicorns</h3>
+                        <p>Un juego de cartas estratégico sobre las dos cosas favoritas de todos: ¡Unicornios y Destrucción!</p>
+                        <p class="precio"><span class="precio-normal">$21.990</span> <span class="precio-oferta">$20.990</span></p>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="volver-inicio">← Volver al inicio</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ludoteca Andana. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.menu-opciones').classList.toggle('activo');
+        });
+    </script>
+</body>
+</html>

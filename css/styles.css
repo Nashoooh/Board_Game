@@ -1,0 +1,337 @@
+:root {
+    --color-principal: #3a9ac4;      /* Celeste pastel principal */
+    --color-secundario: #83cef7;     /* Celeste pastel claro */
+    --color-fondo: #f0f9ff;          /* Fondo muy claro celeste */
+    --color-texto: #155e75;          /* Celeste oscuro para texto */
+    --footer-altura: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--color-principal);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative; /* <-- Importante */
+    z-index: 10;
+}
+
+
+.header-content h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.tarjetas-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-categoria {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    width: 300px;
+    max-width: 90vw;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.tarjeta-categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.tarjeta-categoria span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.tarjeta-categoria:hover img {
+    transform: scale(1.07) rotate(-2deg);
+}
+
+footer {
+    background: var(--color-principal);
+    color: #fff;
+    text-align: center;
+    width: 100vw;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+}
+
+
+@media (max-width: 680px) {
+    .tarjetas-categorias {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .tarjeta-categoria {
+        width: 45vw;
+        min-width: 140px;
+        max-width: 220px;
+    }
+    main {
+        padding-bottom: var(--footer-altura);
+    }
+}
+
+/* 1 columna en móviles pequeños */
+@media (max-width: 400px) {
+    .tarjetas-categorias {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarjeta-categoria {
+        width: 90vw;
+        max-width: 320px;
+    }
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Header layout mejorado */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.logo-header {
+    height: 80px;
+    width: auto;
+}
+
+.header-content h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Menú desplegable oculto por defecto */
+.menu-opciones {
+    display: none;
+    flex-direction: column;
+    background: var(--color-principal);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px; /* ancho fijo para el menú lateral */
+    z-index: 100;
+    border-radius: 0 0 12px 0;
+    box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
+}
+
+.menu-opciones a {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-opciones a:last-child {
+    border-bottom: none;
+}
+
+/* Mostrar menú cuando se activa */
+.menu-opciones.activo {
+    display: flex;
+}
+
+/* Responsive: logo más pequeño en móvil */
+@media (max-width: 600px) {
+    .logo-header {
+        height: 36px;
+    }
+    .header-content h1 {
+        font-size: 1.2rem;
+    }
+}
+
+.categoria-listado {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.producto img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.info-producto h3 {
+    margin: 0.5rem 0 0.2rem 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.info-producto p {
+    margin: 0.2rem 0;
+}
+
+.precio {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.precio-normal {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 0.5rem;
+}
+
+.precio-oferta {
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.volver-inicio {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.volver-inicio:hover {
+    color: var(--color-secundario);
+}
+
+@media (max-width: 900px) {
+    .productos {
+        gap: 1rem;
+    }
+    .producto {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto {
+        width: 90vw;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-opciones {
+        display: flex !important;
+        position: static;
+        width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+        background: var(--color-principal);
+        flex-direction: column;
+    }
+    .logo-header {
+        display: none;
+    }
+    .menu-btn {
+        z-index: 101;
+    }
+}
