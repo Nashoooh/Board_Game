@@ -428,3 +428,79 @@ footer p {
 .navbar {
     animation: slideDown 0.7s ease;
 }
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.2rem 0.8rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--color-principal);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.98rem;
+}
+
+.dropdown-content a:hover {
+    background: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn-login, .btn-registro {
+    margin-left: 0.5rem;
+    padding: 0.35rem 1.1rem;
+    background: var(--color-secundario);
+    color: var(--color-principal);
+    border-radius: 18px;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-login:hover, .btn-registro:hover {
+    background: var(--color-principal);
+    color: #fff;
+}
+
+.logo-navbar {
+    height: 38px;
+    width: auto;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+.navbar-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
