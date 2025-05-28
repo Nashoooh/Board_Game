@@ -17,8 +17,6 @@ Board_Game
 ├── css
 │   └── styles.css         # Hojas de estilo CSS
 ├── images                 # Imágenes utilizadas en el sitio (logo, productos, categorías)
-├── js
-│   └── main.js            # Funcionalidad JavaScript (menú responsive, etc.)
 └── README.md              # Documentación del proyecto
 ```
 
