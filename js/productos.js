@@ -122,6 +122,58 @@ const productos = [
         destacado: true
     },
     {
+        id: "dobble-31-minutos",
+        nombre: "Dobble 31 Minutos",
+        descripcion: "¡Una versión especial de Dobble con los personajes de 31 Minutos!",
+        precio: 24990,
+        oferta: null,
+        imagen: "img/familiares4.jpg",
+        categoria: "familiares",
+        sku: "FAM-004",
+        puntuacion: 4,
+        stock: 6,
+        destacado: false
+    },
+    {
+        id: "31-minutos-feria-de-las-pulgas",
+        nombre: "31 Minutos - La Feria de las Pulgas de Titirilquén",
+        descripcion: "¡Descubre esta frenética reimplementación del clásico Pit, un juego sin turnos y con muchos gritos!",
+        precio: 19990,
+        oferta: 17990,
+        imagen: "img/familiares5.jpg",
+        categoria: "familiares",
+        sku: "FAM-005",
+        puntuacion: 5,
+        stock: 5,
+        destacado: false
+    },
+    {
+        id: "unstable-unicorns-expansion-apocalipsis-irisado",
+        nombre: "Unstable Unicorns - Expansion Apocalipsis Irisado",
+        descripcion: "¡Una expansión para Unstable Unicorns que añade nuevos unicornios y caos al juego!",
+        precio: 24990,
+        oferta: null,
+        imagen: "img/familiares6.jpg",
+        categoria: "familiares",
+        sku: "FAM-006",
+        puntuacion: 4,
+        stock: 7,
+        destacado: false
+    },
+    {
+        id: "unstable-unicorns-expansion-nightmares",
+        nombre: "Unstable Unicorns - Expansion Nightmares",
+        descripcion: "¡Añade un toque de pesadilla a tus partidas de Unstable Unicorns con esta expansión!",
+        precio: 24990,
+        oferta: 22990,
+        imagen: "img/familiares7.jpg",
+        categoria: "familiares",
+        sku: "FAM-007",
+        puntuacion: 4,
+        stock: 10,
+        destacado: false
+    },
+    {
         id: "terraforming-mars",
         nombre: "Terraforming Mars",
         descripcion: "Conviértete en una corporación y transforma Marte para la humanidad.",
@@ -252,6 +304,58 @@ const productos = [
         destacado: true
     },
     {
+        id: "exploding-kittens-expansion-imploding-kittens",
+        nombre: "Exploding Kittens - Expansión Imploding Kittens",
+        descripcion: "¡Añade más caos a tus partidas de Exploding Kittens con esta expansión!",
+        precio: 14990,
+        oferta: null,
+        imagen: "img/party4.jpg",
+        categoria: "party",
+        sku: "PAR-004",
+        puntuacion: 4,
+        stock: 12,
+        destacado: false
+    },
+    {
+        id: "llamagedon",
+        nombre: "Llamagedón",
+        descripcion: "¡Un juego de cartas lleno de humor y caos donde las llamas son las protagonistas!",
+        precio: 17990,
+        oferta: 15990,
+        imagen: "img/party5.jpg",
+        categoria: "party",
+        sku: "PAR-005",
+        puntuacion: 4,
+        stock: 5,
+        destacado: false
+    },
+    {
+        id: "hitster-temazos",
+        nombre: "Hitster - Temazos",
+        descripcion: "Esta nueva versión de Hitster te hará revivir los grandes éxitos de la música a través de un juego de mesa lleno de diversión.",
+        precio: 24990,
+        oferta: null,
+        imagen: "img/party6.jpg",
+        categoria: "party",
+        sku: "PAR-006",
+        puntuacion: 5,
+        stock: 11,
+        destacado: false
+    },
+    {
+        id: "hitster",
+        nombre: "Hitster",
+        descripcion: "¡Un juego de mesa musical donde debes adivinar las canciones más icónicas de todos los tiempos!",
+        precio: 24990,
+        oferta: 22990,
+        imagen: "img/party7.jpg",
+        categoria: "party",
+        sku: "PAR-007",
+        puntuacion: 5,
+        stock: 4,
+        destacado: false
+    },
+    {
         id: "cortex-kids-2",
         nombre: "Cortex Kids 2",
         descripcion: "Con este juego de mesa desarrolla tu agilidad visual, tu coordinación, tu memoria, capacidad de razonamiento … ¡incluso la sensibilidad de tu tacto!",
@@ -288,6 +392,19 @@ const productos = [
         sku: "INF-003",
         puntuacion: 5,
         stock: 6,
+        destacado: false
+    },
+    {
+        id: "Pelusas",
+        nombre: "Pelusas",
+        descripcion: "A las pelusas les encanta ir acumulándose, pero cualquier corriente de aire puede hacer que desaparezcan en un momento... Prueba tu suerte sacando pelusas del montón de polvo y robando pelusas al resto para acumular la mayor cantidad al final del juego.",
+        precio: 17990,
+        oferta: null,
+        imagen: "img/infantil4.jpg",
+        categoria: "infantiles",
+        sku: "INF-004",
+        puntuacion: 4,
+        stock: 8,
         destacado: false
     },
     {
