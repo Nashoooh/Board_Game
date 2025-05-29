@@ -1,3 +1,6 @@
+const PRODUCTOS_POR_PAGINA = 8;
+let paginaActual = 1;
+
 // Funciones
 // Renderiza las estrellas de puntuación
 function renderStars(puntuacion) {
@@ -45,15 +48,45 @@ function renderProductos(productos) {
     `).join('');
 }
 
+// Renderiza los productos de la página actual
+function renderProductosPaginados(productos, pagina = 1) {
+    const inicio = (pagina - 1) * PRODUCTOS_POR_PAGINA;
+    const fin = inicio + PRODUCTOS_POR_PAGINA;
+    renderProductos(productos.slice(inicio, fin));
+    renderPaginacion(productos.length, pagina);
+}
+
+// Renderiza los botones de paginación
+function renderPaginacion(total, pagina) {
+    const totalPaginas = Math.ceil(total / PRODUCTOS_POR_PAGINA);
+    const paginacion = document.getElementById('paginacion');
+    if (!paginacion) return;
+
+    let html = '';
+    for (let i = 1; i <= totalPaginas; i++) {
+        html += `<button class="btn btn-outline-dark btn-sm mx-1${i === pagina ? ' active' : ''}" data-pagina="${i}">${i}</button>`;
+    }
+    paginacion.innerHTML = html;
+
+    // Eventos de los botones
+    paginacion.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            paginaActual = parseInt(this.getAttribute('data-pagina'));
+            renderProductosPaginados(productos, paginaActual);
+        });
+    });
+}
+
 // Obtiene la categoría desde la URL
 function getCategoriaFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('categoria');
 }
 
-// Filtra los productos por categoría y renderiza
+// Filtra los productos por categoría y renderiza paginado
 document.addEventListener('DOMContentLoaded', function() {
-    renderProductos(productos);
+    let productosFiltrados = productos;
+    renderProductosPaginados(productosFiltrados, 1);
 
     // Si hay categoría en la URL, aplica el filtro automáticamente
     const categoria = getCategoriaFromUrl();
@@ -64,18 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
 
-// Filtra los productos por categoría al cargar la página
-document.querySelectorAll('.filtro-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const categoria = this.getAttribute('data-categoria');
-        document.querySelectorAll('.col.mb-5').forEach(card => {
-            if (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) {
-                card.style.display = '';
+    // Botones de filtro de categoría
+    document.querySelectorAll('.filtro-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const categoria = this.getAttribute('data-categoria');
+            if (categoria === 'todos') {
+                productosFiltrados = productos;
             } else {
-                card.style.display = 'none';
+                productosFiltrados = productos.filter(p => p.categoria === categoria);
             }
+            paginaActual = 1;
+            renderProductosPaginados(productosFiltrados, paginaActual);
         });
     });
 });
