@@ -1,37 +1,46 @@
 # Ludoteca Andana
 
-¡Bienvenido al proyecto Ludoteca Andana! Este repositorio contiene el código fuente del sitio web de Ludoteca Andana, una plataforma dedicada a mostrar un catálogo de juegos de mesa organizados por categorías.
+¡Bienvenido al proyecto Ludoteca Andana! Este repositorio contiene el código fuente de una tienda simulada de juegos de mesa, creada con fines académicos.
 
 ## Estructura del Proyecto
 
-El proyecto está organizado de la siguiente manera:
-
 ```
 Board_Game
-├── index.html             # Página principal con categorías de juegos
-├── categoria1.html        # Página de Juegos Familiares
-├── categoria2.html        # Página de Juegos de Estrategia
-├── categoria3.html        # Página de Party Games
-├── categoria4.html        # Página de Juegos Infantiles
-├── categoria5.html        # Página de Juegos para Pareja
-├── css
-│   └── styles.css         # Hojas de estilo CSS
-├── images                 # Imágenes utilizadas en el sitio (logo, productos, categorías)
+├── index.html             # Página principal
+├── productos.html         # Catálogo general de juegos
+├── envios.html            # Políticas de envíos y retiros
+├── devoluciones.html      # Políticas de devoluciones y cambios
+├── detalle_item.html      # Detalles del producto seleccionado
+├── contacto.html          # Formulario de contacto
+├── registro.html          # Formulario de registro de usuario
+├── nosotros.html          # Sección sobre la ludoteca
+├── css/
+│   ├── detalle_item.css   # Hoja de estilo
+│   ├── productos.css      # Hoja de estilo
+│   └── styles.css         # Hoja de estilo
+├── js/
+│   ├── contacto.js        # Validación y lógica del formulario de contacto
+│   ├── detalle_item.js    # Logica para mostrar el detalle del item seleccionado
+│   ├── index.js           # Logica para listar productos destacados, carousel, entre otros.
+│   ├── productos.js       # Lista de productos creados, visualizacion y filtros.
+│   └── registro.js        # Validación y lógica del formulario de registro
+├── img/                   # Imágenes del sitio (logo, productos, etc.)
 └── README.md              # Documentación del proyecto
 ```
 
 ## Características
 
-- **Página principal:** Muestra el nombre de la ludoteca y las categorías de juegos con imágenes. Cada categoría enlaza a una página dedicada con los productos de esa categoría.
-- **Páginas de categorías:** Listado tipo ecommerce con imagen, nombre, descripción, precio normal y precio en oferta si corresponde.
-- **Diseño responsivo:** El sitio se adapta a dispositivos móviles y de escritorio.
-- **Menú de navegación:** Menú desplegable en móviles y barra de navegación en escritorio.
-- **Footer fijo:** Pie de página presente en todas las páginas.
+- **Página principal:** Acceso rápido a categorías y navegación.
+- **Catálogo de productos:** Filtros por categoría, visualización de juegos con imagen, nombre, descripción y precios.
+- **Sección Nosotros:** Información sobre el proyecto, misión, visión y origen.
+- **Políticas de envío y devoluciones:** Información clara y tablas de comunas.
+- **Formulario de contacto:** Con validación y motivos dinámicos.
+- **Formulario de registro:** Validación de datos, restricciones de edad y seguridad de contraseña.
+- **Diseño responsivo:** Adaptado a dispositivos móviles y escritorio.
+- **Menú de navegación y footer fijo:** Presente en todas las páginas.
 - **Paleta de colores pastel celeste:** Apariencia moderna y amigable.
 
 ## Cómo comenzar
-
-Para ver el proyecto localmente:
 
 1. Clona el repositorio:
    ```
@@ -44,3 +53,7 @@ Para ver el proyecto localmente:
    ```
 
 3. Abre `index.html` en tu navegador web favorito.
+
+---
+
+**Nota:** Este proyecto es una simulación académica y no realiza ventas reales.
