@@ -76,12 +76,14 @@
             <!-- Filtros Productos -->
             <div class="filtro-categorias text-center my-4">
                 <h5 class="mb-3">Categorías</h5>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="todos">Todos</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="estrategia">Estrategia</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="familiares">Familiares</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="infantiles">Infantiles</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="pareja">Pareja</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="party">Party Game</button>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="todos">Todos</button>
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="estrategia">Estrategia</button>
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="familiares">Familiares</button>
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="infantiles">Infantiles</button>
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="pareja">Pareja</button>
+                    <button class="btn btn-outline-dark filtro-btn mb-2" data-categoria="party">Party Game</button>
+                </div>
             </div>
 
             <!-- Productos -->
@@ -166,10 +168,6 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/index.js"></script>
-        <!-- Cargar componentes reutilizables -->
-        <script src="js/components.js"></script>
         <!-- Cargar filtro productos -->
         <script src="js/productos.js"></script>
 
