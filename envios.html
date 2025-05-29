@@ -52,42 +52,73 @@
                 </div>
             </div>
         </nav>
-        
-        <!-- Header-->
-        <header class="bg-dark py-3">
-            <div class="container px-4 px-lg-5 my-3">
-                <div class="text-center text-white">
-                    <h1 class="display-6 fw-bolder mb-2">Productos</h1>
-                </div>
-            </div>
-        </header>
 
-        <!-- Section -->
+        <!-- Seccion Envíos y Retiros -->
         <section class="py-5">
-
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="mb-4 d-flex left gap-2">
-                    <a href="index.html" class="btn btn-outline-dark">
-                        <i class="bi bi-house-door me-1"></i> Inicio
-                    </a>
-                </div>
-            </div>
-
-            <!-- Filtros Productos -->
-            <div class="filtro-categorias text-center my-4">
-                <h5 class="mb-3">Categorías</h5>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="todos">Todos</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="estrategia">Estrategia</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="familiares">Familiares</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="infantiles">Infantiles</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="pareja">Pareja</button>
-                <button class="btn btn-outline-dark filtro-btn" data-categoria="party">Party Game</button>
-            </div>
-
-            <!-- Productos -->
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="container px-4 px-lg-5 mt-5">
-                    <div id="productos-lista" class="productos row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"></div>
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-4">
+                        <img src="img/envio.png" alt="Logo Ludoteca Andana" class="img-fluid" style="max-width: 380px;">
+                    </div>
+                    <div class="col-lg-10 col-xl-8 mx-auto">
+                        <h2 class="fw-bolder mb-3">Políticas de Envío y Retiros</h2>
+                        <h4 class="mt-4 mb-2">Envíos en Santiago</h4>
+                        <ul>
+                            <li>Pedidos realizados <strong>antes de las 12:00 hrs</strong> se despachan el mismo día hábil en comunas seleccionadas (ver tabla).</li>
+                            <li>Pedidos realizados <strong>después de las 12:00 hrs</strong> se despachan el día hábil siguiente.</li>
+                            <li>En comunas periféricas (ej: Lampa, Colina, Padre Hurtado, etc.) el despacho es al día hábil siguiente.</li>
+                        </ul>
+                        <div class="table-responsive mb-3">
+                            <table class="table table-bordered table-sm align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Comunas con Delivery Mismo Día</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul class="mb-0">
+                                                <li>Santiago Centro</li>
+                                                <li>Providencia</li>
+                                                <li>Ñuñoa</li>
+                                                <li>Las Condes</li>
+                                                <li>La Reina</li>
+                                                <li>Macul</li>
+                                                <li>San Joaquín</li>
+                                                <li>Peñalolén</li>
+                                                <li>Independencia</li>
+                                                <li>Recoleta</li>
+                                                <li>Estación Central</li>
+                                                <li>Quinta Normal</li>
+                                                <li>Lo Prado</li>
+                                                <li>Pedro Aguirre Cerda</li>
+                                                <li>San Miguel</li>
+                                                <li>San Ramón</li>
+                                                <li>La Florida</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4 class="mt-4 mb-2">Envíos a Regiones</h4>
+                        <ul>
+                            <li>Despacho a regiones en <strong>2 días hábiles</strong> vía courier.</li>
+                            <li>El número de seguimiento será enviado por correo electrónico una vez despachado.</li>
+                        </ul>
+                        <h4 class="mt-4 mb-2">Retiros en tienda</h4>
+                        <ul>
+                            <li>Pedidos realizados <strong>antes de las 12:00 hrs</strong> pueden retirarse el mismo día hábil.</li>
+                            <li>Pedidos realizados <strong>después de las 12:00 hrs</strong> pueden retirarse al día hábil siguiente.</li>
+                            <li>Para retirar, debes presentar la orden de compra enviada a tu correo electrónico.</li>
+                        </ul>
+                        <h4 class="mt-4 mb-2">Información adicional</h4>
+                        <ul>
+                            <li>Los despachos y retiros se realizan de lunes a viernes, excepto feriados.</li>
+                            <li>Si tienes dudas, puedes contactarnos a través de nuestro formulario o WhatsApp.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -166,11 +197,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/index.js"></script>
-        <!-- Cargar componentes reutilizables -->
-        <script src="js/components.js"></script>
-        <!-- Cargar filtro productos -->
         <script src="js/productos.js"></script>
-
+        <script src="js/detalle_item.js"></script>
     </body>
 </html>

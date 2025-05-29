@@ -1,17 +1,197 @@
-<!-- registro.html -->
-<main>
-  <section class="registro">
-    <h2>Registro de Usuario</h2>
-    <form id="form-registro">
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="text" name="usuario" placeholder="Nombre de usuario" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <input type="password" name="clave" placeholder="Clave" required>
-      <input type="password" name="clave2" placeholder="Repetir clave" required>
-      <input type="date" name="fecha_nacimiento" required>
-      <input type="text" name="direccion" placeholder="Dirección de despacho" required>
-      <button type="submit">Registrarse</button>
-    </form>
-    <div id="mensaje-registro"></div>
-  </section>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Pagina Venta Juegos de Mesa" />
+        <meta name="author" content="Ignacio Andana" />
+        <title>Ludoteca Andana</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/logo.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/productos.css" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <!-- <a class="navbar-brand" href="#!">Ludoteca Andana</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="productos.html">Juegos de Mesa</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="productos.html?categoria=estrategia">Estrategia</a></li>
+                                <li><a class="dropdown-item" href="productos.html?categoria=familiares">Familiares</a></li>
+                                <li><a class="dropdown-item" href="productos.html?categoria=infantiles">Infantiles</a></li>
+                                <li><a class="dropdown-item" href="productos.html?categoria=pareja">Pareja</a></li>
+                                <li><a class="dropdown-item" href="productos.html?categoria=party">Party Game</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="envios.html">Envíos y Retiros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="devoluciones.html">Devoluciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="modal" data-bs-target="#modalProximamente">Login</button>
+                        <button class="btn btn-outline-dark me-2" type="button" onclick="window.location.href='registro.html'">Registro</button>
+                        <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalProximamente">
+                            <i class="bi-cart-fill me-1"></i>
+                            Carrito
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sección Registro -->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8 mx-auto">
+                        <h2 class="fw-bolder mb-3">Formulario de Registro</h2>
+                        <form id="form-registro" autocomplete="off">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="usuario" name="usuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="clave" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="clave" name="clave" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="clave2" class="form-label">Repetir contraseña</label>
+                                    <input type="password" class="form-control" id="clave2" name="clave2" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección de despacho (opcional)</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion">
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-outline-dark me-2">Registrar</button>
+                                <button type="button" class="btn btn-secondary" id="btn-limpiar">Limpiar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Información de la tienda -->
+                    <div class="col-md-4 text-white mb-3">
+                        <h5 class="text-uppercase">Ludoteca Andana</h5>
+                        <p class="text-white-50">¡Donde los tableros cobran vida y la diversión nunca termina!</p>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-md-4 text-white mb-3">
+                        <h5 class="text-uppercase">Contacto</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-geo-alt me-2"></i> Av. Vicuña Mackenna 1234, Ñuñoa, Santiago, Chile</li>
+                            <li><i class="bi bi-telephone me-2"></i> +56 9 1234 5678</li>
+                            <li><i class="bi bi-envelope me-2"></i> contacto@ludotecaandana.cl</li>
+                            <li><i class="bi bi-whatsapp me-2"></i> <a href="https://wa.me/56912345678 " target="_blank" class="text-white text-decoration-none">Chatea con nosotros</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="col-md-4 text-white mb-3">
+                        <h5 class="text-uppercase">Síguenos</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item me-3">
+                                <a href="https://facebook.com/ludotecaandana " target="_blank" class="text-white">
+                                    <i class="bi bi-facebook fs-3"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="https://instagram.com/ludotecaandana " target="_blank" class="text-white">
+                                    <i class="bi bi-instagram fs-3"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/ludotecaandana " target="_blank" class="text-white">
+                                    <i class="bi bi-x fs-3"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="row mt-4">
+                    <div class="col text-center text-white">
+                        <p class="m-0">&copy; 2025 Ludoteca Andana. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal Próximamente -->
+        <div class="modal fade" id="modalProximamente" tabindex="-1" aria-labelledby="modalProximamenteLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProximamenteLabel">¡Próximamente!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    La funcionalidad de carrito estará disponible pronto.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de éxito -->
+        <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalExitoLabel">¡Mensaje enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto pronto.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/registro.js"></script>
+    </body>
+</html>

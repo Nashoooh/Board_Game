@@ -10825,34 +10825,5 @@ textarea.form-control-lg {
   }
 }
 
-.carousel-item {
-    height: 300px; /* Ajusta la altura según necesites */
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.carousel-caption h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.carousel-caption p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.carousel-caption .btn {
-    font-size: 1.1rem;
-    padding: 0.5rem 2rem;
-}
 
 
