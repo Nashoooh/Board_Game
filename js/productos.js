@@ -86,17 +86,17 @@ function getCategoriaFromUrl() {
 // Filtra los productos por categoría y renderiza paginado
 document.addEventListener('DOMContentLoaded', function() {
     let productosFiltrados = productos;
-    renderProductosPaginados(productosFiltrados, 1);
-
-    // Si hay categoría en la URL, aplica el filtro automáticamente
     const categoria = getCategoriaFromUrl();
-    if (categoria) {
+
+    // Si hay categoría en la URL, filtra directamente
+    if (categoria && categoria !== 'todos') {
+        productosFiltrados = productos.filter(p => p.categoria === categoria);
+        // Opcional: marcar el botón activo visualmente
         document.querySelectorAll('.filtro-btn').forEach(btn => {
-            if (btn.getAttribute('data-categoria') === categoria) {
-                btn.click();
-            }
+            btn.classList.toggle('active', btn.getAttribute('data-categoria') === categoria);
         });
     }
+    renderProductosPaginados(productosFiltrados, 1);
 
     // Botones de filtro de categoría
     document.querySelectorAll('.filtro-btn').forEach(btn => {
@@ -109,6 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             paginaActual = 1;
             renderProductosPaginados(productosFiltrados, paginaActual);
+
+            // Opcional: marcar el botón activo visualmente
+            document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
         });
     });
 });
