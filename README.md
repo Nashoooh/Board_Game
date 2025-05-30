@@ -21,8 +21,9 @@ Board_Game
 ├── js/
 │   ├── contacto.js        # Validación y lógica del formulario de contacto
 │   ├── detalle_item.js    # Logica para mostrar el detalle del item seleccionado
-│   ├── index.js           # Logica para listar productos destacados, carousel, entre otros.
-│   ├── productos.js       # Lista de productos creados, visualizacion y filtros.
+│   ├── data_productos.js  # Solo la lista de productos
+│   ├── productos.js       # Funciones y lógica de productos.html
+│   ├── index.js           # Lógica de index.html
 │   └── registro.js        # Validación y lógica del formulario de registro
 ├── img/                   # Imágenes del sitio (logo, productos, etc.)
 └── README.md              # Documentación del proyecto

@@ -10826,4 +10826,19 @@ textarea.form-control-lg {
 }
 
 
+/* .container-custom {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
 
+#categoriasCarousel {
+  width: 100% !important;
+  max-height: 100% !important;
+}
+
+#categoriasCarousel img {
+  max-height: 65vh !important;
+  object-fit: cover !important;
+} */

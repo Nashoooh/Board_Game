@@ -11,7 +11,7 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/productos.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
 
@@ -54,7 +54,7 @@
         </nav>
 
         <!-- Header-->
-        <header class="bg-dark py-4">
+        <header class="bg-dark py-1">
             <div class="container px-4 px-lg-5 my-4">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder mb-3">Ludoteca Andana</h1>
@@ -63,71 +63,72 @@
             </div>
         </header>
         
+        <!-- Categorías Destacadas Carousel -->
+        <div class="container container-custom">
+        <!-- <div class="container-fluid px-0 mt-5"> -->
+            <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/estrategia.png" class="d-block w-100" alt="Juegos de Estrategia">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Estrategia</h3>
+                            <p>Desafía tu mente con nuestros juegos de estrategia</p>
+                            <a href="productos.html?categoria=estrategia" class="btn btn-light">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/familiares.png" class="d-block w-100" alt="Juegos Familiares">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Familiares</h3>
+                            <p>Diversión para toda la familia</p>
+                            <a href="productos.html?categoria=familiares" class="btn btn-light">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/infantiles.png" class="d-block w-100" alt="Juegos Infantiles">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Infantiles</h3>
+                            <p>Juegos educativos y divertidos para los más pequeños</p>
+                            <a href="productos.html?categoria=infantiles" class="btn btn-light">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pareja.png" class="d-block w-100" alt="Juegos de Pareja">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Pareja</h3>
+                            <p>Juegos perfectos para dos</p>
+                            <a href="productos.html?categoria=pareja" class="btn btn-light">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/party.png" class="d-block w-100" alt="Party Games">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Party Games</h3>
+                            <p>¡La diversión perfecta para tus reuniones!</p>
+                            <a href="productos.html?categoria=party" class="btn btn-light">Ver Categoría</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
         <!-- Section-->
         <section class="py-5">
-            <!-- Categorías Destacadas Carousel -->
-            <div class="container px-4 px-lg-5 mt-5">
-                <!-- <h2 class="text-center mb-5">Nuestras Categorías</h2> -->
-                <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/estrategia.png" class="d-block w-100" alt="Juegos de Estrategia">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Estrategia</h3>
-                                <p>Desafía tu mente con nuestros juegos de estrategia</p>
-                                <a href="productos.html?categoria=estrategia" class="btn btn-light">Ver Categoría</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/familiares.png" class="d-block w-100" alt="Juegos Familiares">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Familiares</h3>
-                                <p>Diversión para toda la familia</p>
-                                <a href="productos.html?categoria=familiares" class="btn btn-light">Ver Categoría</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/infantiles.png" class="d-block w-100" alt="Juegos Infantiles">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Infantiles</h3>
-                                <p>Juegos educativos y divertidos para los más pequeños</p>
-                                <a href="productos.html?categoria=infantiles" class="btn btn-light">Ver Categoría</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/pareja.png" class="d-block w-100" alt="Juegos de Pareja">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Pareja</h3>
-                                <p>Juegos perfectos para dos</p>
-                                <a href="productos.html?categoria=pareja" class="btn btn-light">Ver Categoría</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/party.png" class="d-block w-100" alt="Party Games">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Party Games</h3>
-                                <p>¡La diversión perfecta para tus reuniones!</p>
-                                <a href="productos.html?categoria=party" class="btn btn-light">Ver Categoría</a>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-            </div>
         
             <!-- Juegos Destacados -->
             <div class="container px-4 px-lg-5 mt-5">
@@ -228,7 +229,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    La funcionalidad de carrito estará disponible pronto.
+                    La funcionalidad estará disponible pronto.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
@@ -239,9 +240,9 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Cargar Lista de Productos -->
+        <script src="js/data_productos.js"></script>
         <!-- Cargar Destacados -->
         <script src="js/index.js"></script>
-        <!-- Cargar Productos -->
-        <script src="js/productos.js"></script>
     </body>
 </html>
